@@ -1,20 +1,19 @@
 import React, { useState } from "react";
+import { NavLink as RRNavLink } from "react-router-dom";
 import {
+  Collapse,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Nav,
   Navbar,
   NavbarBrand,
   NavbarToggler,
-  Collapse,
-  Nav,
   NavItem,
   NavLink,
   UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
 import { Categories } from "../../utils/Categories";
-
-import { NavLink as RRNavLink } from "react-router-dom";
 
 const MenuHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +32,11 @@ const MenuHeader = () => {
           <NavItem>
             <NavLink tag={RRNavLink} to="/contact">
               Contato
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={RRNavLink} to="/shows">
+              Shows
             </NavLink>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
